@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王若淇 Rossco - 秘书处</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">王若淇 Rossco</div>
+            
+            <div class="department-info">申请部门: 秘书处</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一， 2029 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Operations Research Engineering, CoE</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">RosscoWRQ</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    备注
+                </div>
+                <div class="answer-text">
+                    
+                        报名过广州志愿者，对CSSA很有热情
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1dQgV6YCOHXRc7YXQhasBRfeULa16wP-f" target="_blank">https://drive.google.com/open?id=1dQgV6YCOHXRc7YXQhasBRfeULa16wP-f</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/王若淇 Rossco_img_2_1719.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1HP3iEzpPOfwOqr6nJB08G5K0WThB_2oF" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        一直以来，我都受到了CSSA的帮助：开学很迷茫的时候，新生手册救了我一命；选课的时候，CSSA的学长学姐特别热情地向我分享经验。大家在CSSA群里的互动让CSSA变成大家凝聚力的核心，也是底气和依靠。
+
+我特别感谢CSSA曾给过我的帮助，希望能加入这个大家庭，帮助更多像我一样的中国留学生找到归属感。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        我第一次近距离感受到CSSA的氛围是在广州见面会当志愿者以后聚餐的时候。大家说说笑笑对新人特别照顾，特别亲切。包括即使已经从Cornell毕业了的学长，现在依然在参加CSSA的活动，为CSSA宣传，回忆当年的生活，让人感觉在异国他乡CSSA就是中国留学生的另一个故乡和家，家人之间互帮互助，超级幸福。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        我想给CSSA做一个微信小程序，大家可以更方便查看CSSA的官方动态，包括在小程序上自由交流和社交，向CSSA匿名提议，收集大家的想法，都是非常有用的功能，让中国留子对CSSA更有参与感，因为CSSA不只是学联内部的人参与，我希望所有中国留学生都可以为学联的发展添砖加瓦。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">秘书处</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如果让你选择未来一周的工作，你想做什么？
+                </div>
+                <div class="answer-text">
+                    
+                        为CSSA官网开发一个新功能
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    当别人第一次见到你时，他们会说“哇，你居然___！”（请填空）  
+                </div>
+                <div class="answer-text">
+                    
+                        这么会做饭
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    某天深夜，一位新生在微信上非常焦急地询问：‘我的航班延误了了，接机联系不上怎么办？现在半夜一个人在机场好害怕...’
+作为小助手值班的你，会如何回复？请写出具体回应（注意：你无法直接解决问题，但需要让TA感到安心）。
+                </div>
+                <div class="answer-text">
+                    
+                        没关系不慌，接机可能只是没有联系上你先去下一单了。飞机延误是大多数留学生都会遇到的问题，最后都有办法解决，一定可以安全到学校的！你放心我一直在线不要害怕，过一会再联系一下接机，我线上陪你到你安全上车～
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你希望从秘书处的伙伴们和这份工作中获得什么？（比如：深厚的友谊？一份完美的简历？超硬核的技能？还是单纯的快乐？）
+                </div>
+                <div class="answer-text">
+                    
+                        一群无法替代的朋友和制作网站小程序的技能
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    （可选）有人说“我们属于我们投入过心力的地方”。你希望自己在秘书处留下怎样的痕迹？  
+                </div>
+                <div class="answer-text">
+                    
+                        制作一个小程序
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    （可选） 秘书处传统：每次团建都要尝试一个奇奇怪怪的新活动。你有什么离谱但有趣的idea吗？（多奇怪都行）
+                </div>
+                <div class="answer-text">
+                    
+                        方言传话：大家用自己家乡的方言传递第一句话
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我很喜欢做很多技术上的创新来帮助大家有更好的体验感。我觉得秘书处虽然规模不大，但是是CSSA隐藏的脊柱，在CSSA大大小小的事情提供组织性的帮助。我很希望能在CSSA的小程序开发上做出一点贡献
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        作为一个在高中很喜欢张罗事的人，我很喜欢在高中提出各种各样的活动，然后跟同学老师沟通怎么举办。在高中作为文体部部长和各种社团的社长，我知道举办活动不仅仅需要主意和热情，更需要细心安排时间场地，不断优化方案，并且考虑到团体的感受，以及大大小小的事前准备和收尾工作。我希望在CSSA可以给大家创造快乐！
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    Any other questions or comments?
+                </div>
+                <div class="answer-text">
+                    
+                        GO CSSA!
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

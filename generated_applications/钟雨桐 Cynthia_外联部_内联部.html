@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钟雨桐 Cynthia - 外联部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">钟雨桐 Cynthia</div>
+            
+            <div class="department-info">申请部门: 外联部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大二，2028 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Physics, CAS</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">13335241467</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    备注
+                </div>
+                <div class="answer-text">
+                    
+                        有与第三方沟通谈判的经验
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1EjC8fVDbLfjb4T0fx9t9WOGCzKWcb0QV" target="_blank">https://drive.google.com/open?id=1EjC8fVDbLfjb4T0fx9t9WOGCzKWcb0QV</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/钟雨桐 Cynthia_img_2_6453.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1mUq9hx8ySOnBhJ8tu6s-TDVnFleUdAq0" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        CSSA在我初到美国时就给予了我很多支持：从选课答疑到迎新指导，从中秋、春节活动到学术与职业讲座，都让我在异乡感到踏实与温暖。加入CSSA，对我而言既是回馈这份帮助，也希望把信息、资源与关怀传递给更多同学，帮助新生尽快适应校园生活，搭起与本地社区的桥梁，营造团结互助、积极向上的中国学生圈。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        在CSSA的info session中提到，CSSA的内联需要细心的，能够记住每位成员生日的人。我觉得这份温暖不只在内部，也贯穿每场对外的活动。通过各个部门紧密协作：外联筹资、内联筹办、秘书处处理细碎事务、宣传触达每位学生...CSSA像把康村中国留子系在一起的绑带，让大家相知相识。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        想做一些fundraising做一些售卖活动，设计一些康奈尔周边/cssa周边产品/中国食物/中国小吃之类的
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">外联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    之前是否有谈赞助/谈判经验？若无，请填“无”；
+若有，请稍作描述。
+                </div>
+                <div class="answer-text">
+                    
+                        高中时期创办小型A-Level线上辅导机构，与家长就课程内容、课包定价与课时费、退款/改期规则进行充分沟通，并与兼职教师就课时费、提成、时段与服务标准谈判；现在重启项目，扩大规模正规化运营，在公司注册后主导技术外包（小程序）合作，就薪资结构与股权/分红激励方案展开谈判，明确交付标准。作为北京德渊教育初始成员，我代表团队与装修承包商就报价、工期、变更单与质保议价，并与机构创始人协商预算与设计、装修团队选择。总体而言，我兼具 To B 与 To C 的实战经验，能够与不同角色高效沟通，快速识别并灵活应对多样化需求。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我选择外联部因为这是我认为自己最适合的岗位。朋友对我第一印象大多都是冷静理性、行事果断，表达直爽干练；但除此之外我还拥有团队沟通协作的能力。我热爱创业，谈判的过程对我来说是一种享受，我喜欢赚钱，主动争取和抓住一切可能的机会。我相信在外联部能最大化发挥所长、创造价值。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我印象最深的就是对于内联部的介绍里讲到：内联部需要的是细心的，能够发现每个人的情绪的，能够记住每个人生日的，能够记住谁不吃香菜的人。我一直是friend groups里mom的角色，旅行出游计划，做饭，拍照，遇到紧急问题都是我来解决，朋友们失恋，抑郁，焦虑也都会来找我倾诉，天生自带亲和力和靠谱。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

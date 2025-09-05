@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温睿麟 Samuel - 内联部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">温睿麟 Samuel</div>
+            
+            <div class="department-info">申请部门: 内联部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一，2029 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Biological Engineering, CALS</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">samuelwen2333</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1tj8345hYlSrDUmYGaq8O_IcXsTC7pAAU" target="_blank">https://drive.google.com/open?id=1tj8345hYlSrDUmYGaq8O_IcXsTC7pAAU</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/温睿麟 Samuel_img_1_698.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=13XftBpteMuzMlMy5VL-qk_GGIROfXZ3g" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        CSSA对我而言不仅是引路人，也给了我作为一个中国人一种独有的归属感。来到校园后，我看到CSSA举办的活动都充满“烟火气”，比如说春晚和好声音，让人有一种回家了的感觉。作为中国学生，我也希望把CSSA这份善意与温情继续传递给未来的学弟学妹们，让他们在初到康奈尔时，也能感受到同样的关怀和支持。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        在我心中，CSSA就像迷茫海面上的一盏航灯。刚被录取时，我是即兴奋又迷茫：我该怎么认识新的校友？如何获得学校的信息？正是在小红书上看到CSSA，并通过小助手加入了新生群，我才获得了第一手资讯，认识了许多关系很好的朋友。CSSA在我还没踏入校园时就已经在我的心中占据了独特的位置。一个温暖，亲切的组织。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        我希望能策划多一些既传承传统，有趣，又充满“烟火气”的活动。例如男生女生向前冲，时不时整个夜市之类的
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我觉得内联部最核心的工作就是“成为大家的朋友”和“让大家成为朋友”。然后组织活动，把新老成员聚在一起，带大家一起玩。我觉得我的性格很适合内联，我很在意大家的感受，也容易和不同的人打成一片。在高中时，我也是那种天天喊着大家一起出去嗨，在家里开派对的人，这些经历让我有信心在内联提高CSSA的凝聚力。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">财务部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我的专业是Biological Engineering,，天天跟数字打交道，所以对数字特别敏感的。实习时我还做过一阵会计，算账也不在话下。我从初中开始就开始自己管钱，在省钱和如何花最少钱干最多的事这一块我也是很有经验的。最后我觉得财务部就像 CSSA 的大脑和算盘，最能运筹帷幄，掌控全局。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    Any other questions or comments?
+                </div>
+                <div class="answer-text">
+                    
+                        No
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李雨洁Judy - 内联部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">李雨洁Judy</div>
+            
+            <div class="department-info">申请部门: 内联部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一，2029Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Econ + Public Policy，CAS</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">yunki0701_</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    备注
+                </div>
+                <div class="answer-text">
+                    
+                        小红书2k粉
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1n_7WzEDMEWR4Vt94IPAFfzbsca9CUkqQ" target="_blank">https://drive.google.com/open?id=1n_7WzEDMEWR4Vt94IPAFfzbsca9CUkqQ</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/李雨洁Judy_img_2_5920.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1aTclbC4qwd_bzI8CywPyHNW7pvAylNH2" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        从收到康奈尔录取通知起，CSSA便是第一个向我伸出热情之手的组织。参加北京的新生见面会时，听着学长学姐们分享各种建议，我更加体会到CSSA给予华人学生的温暖与归属感。我希望加入CSSA，延续这份支持与家的氛围，并将它传递给更多的新生，帮助他们更快融入校园生活。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        在我心目中，CSSA是一个温暖的大家庭。这里不仅充满爱与互助，更是让华人学生彼此联系、分享经验的平台。无论是学业上的支持，还是生活中的关怀，CSSA都在用心营造家的氛围。在CSSA，大家不只是社团里的成员，还是一群志同道合的伙伴们。CSSA让我们在异国他乡不再孤单，而是能依靠彼此，共同成长。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        在康村寒冷的冬天，我最想实现的就是让校园里的华人伙伴们在春节时都能吃上一碗热腾腾的饺子。通过举办春节包饺子或年夜饭活动，不仅能缓解思乡之情，也能让同学们在忙碌的学业之余感受到家的温暖。我希望用这样的方式，把大家凝聚在一起，共同创造难忘的回忆。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        作为一名美高生，我曾在高中创立中国文化社团，并每月举办一次活动，例如包饺子、学习书法、分享传统节日故事等。这些经历不仅锻炼了我在活动组织、协调和经费管理方面的能力，也让我深刻体会到如何通过活动增强大家的参与感与凝聚力。我相信这些经验能够很好地应用在内联部的工作中，为CSSA营造更紧密的大家庭氛围。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">宣传部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如有公众号排版、社交媒体运营或其他相关经历，请在下方文字框内粘贴相关公众号文章链接、作品链接，或进行补充说明。
+                </div>
+                <div class="answer-text">
+                    
+                        小红书：罐装贴纸（id：128174340）现粉丝量2179
+抖音：罐装贴纸（id：la4meyl_)现粉丝量9.8w
+擅长于剪视频，特别是vlog形式。（虽然现在不是很经常发视频和帖子了，但是排版和剪视频还是挺拿手的^ ^）
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        作为一个热爱在抖音和小红书上创作内容的学生，我深知一段充满活力的视频有多么具有感染力。我希望将自己的技能应用到CSSA中，无论是剪辑社团内retreat的vlog，还是制作活动预告，通过社交平台宣传活动、打造吸引人的视觉内容，让更多同学了解并参与CSSA，同时提升组织在校园的影响力。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章安涛+Kitty - 宣传部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">章安涛+Kitty</div>
+            
+            <div class="department-info">申请部门: 宣传部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大二, 2028 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">double major: Environment & Sustainability, Communication; CALS</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">zhangantao0910</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1-wQ2RlrUWljkomgIV9py7jT5UquNqkxW" target="_blank">https://drive.google.com/open?id=1-wQ2RlrUWljkomgIV9py7jT5UquNqkxW</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/章安涛Kitty_img_1_9676.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1BHC1dDZH6t8HYRL9jIumuPPt5fMX1ow0" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        我在美高时曾担任 CSSA 的 President。记得在中秋晚会上，和朋友们边流泪边合唱《荷塘月色》；也记得在新年晚会上，和同学们煮饺子，抢红包时的欢笑。我曾陪伴一百多位远离家乡的中国学生，在他们最想家的时候，带来温暖与归属。我希望把这份爱与陪伴继续带到 Cornell，传递给更多的国际学生。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        在我心里，CSSA 就是我在美国的家。不管在海外留学待了多久，每到过节或者想家的时候，我总是想回到中国同学身边，大家一起吃顿中餐，就能让我感受到家乡的温暖。对我来说，CSSA 永远是一个能让我被理解、被倾听的地方，也是我在最想家、最脆弱的时候能找到陪伴的地方。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        在高中当 CSSA president 的时候，我主要负责活动组织。每次看到同学们因为月饼、红包这些小惊喜而开心，我都特别有成就感。到了 Cornell，我不光想继续办活动，也想用自己的设计和沟通能力，让更多人参与进来，找到家的感觉。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">宣传部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如果申请宣传部，我们强烈建议提交一份作品集（max 2 pages）。
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1Ecttx8ve0hruVvBdWuXBm3Gg5liDI02F" target="_blank">https://drive.google.com/open?id=1Ecttx8ve0hruVvBdWuXBm3Gg5liDI02F</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如有公众号排版、社交媒体运营或其他相关经历，请在下方文字框内粘贴相关公众号文章链接、作品链接，或进行补充说明。
+                </div>
+                <div class="answer-text">
+                    
+                        1）我今年暑假在超媒体（Meta Media）的 ZiWU 誌屋 和 iWeekly 周末画报实习时用秀米写的、排版并发布的微信公众号文章。Examples & links attached in the pdf above. 
+
+2）这些是我在小红书上宣传的posts：
+- 67 【西太后之所以是西太后 - ZiWU誌屋 | 小红书 - 你的生活兴趣社区】 😆 sOlK6Q3qroFA0dd 😆 <a href="https://www.xiaohongshu.com/discovery/item/688b161f0000000023021a3b?source=webshare&xhsshare=pc_web&xsec_token=AB6GdCAhicbqIo5VxV1NXuPZZLa6ACHn95gVMR2heSXSI=&xsec_source=pc_share" target="_blank">https://www.xiaohongshu.com/discovery/item/688b161f0000000023021a3b?source=webshare&xhsshare=pc_web&xsec_token=AB6GdCAhicbqIo5VxV1NXuPZZLa6ACHn95gVMR2heSXSI=&xsec_source=pc_share</a> 
+- 46 【香奈儿 《ARTS & CULTURE》推出首期杂志 - ZiWU誌屋 | 小红书 - 你的生活兴趣社区】 😆 d97feOssBPn4Izo 😆 <a href="https://www.xiaohongshu.com/discovery/item/6875fd33000000002203c9a0?source=webshare&xhsshare=pc_web&xsec_token=ABj8Z8NjNrNh7ENSpPX3LRbP13umj1Z8tIYo3DrP5djsQ=&xsec_source=pc_share" target="_blank">https://www.xiaohongshu.com/discovery/item/6875fd33000000002203c9a0?source=webshare&xhsshare=pc_web&xsec_token=ABj8Z8NjNrNh7ENSpPX3LRbP13umj1Z8tIYo3DrP5djsQ=&xsec_source=pc_share</a>
+- 54 【在张园看叶锦添摄影展：平凡中的不平凡 - ZiWU誌屋 | 小红书 - 你的生活兴趣社区】 😆 4AUxBXoCuC1z1oQ 😆 <a href="https://www.xiaohongshu.com/discovery/item/6886ebb3000000002001bd4f?source=webshare&xhsshare=pc_web&xsec_token=ABzhEhICUkEiwSBrCiUSVpCb7U1M0UBJ4Z9dsdjGmYN54=&xsec_source=pc_share" target="_blank">https://www.xiaohongshu.com/discovery/item/6886ebb3000000002001bd4f?source=webshare&xhsshare=pc_web&xsec_token=ABzhEhICUkEiwSBrCiUSVpCb7U1M0UBJ4Z9dsdjGmYN54=&xsec_source=pc_share</a>
+
+3）我在高中时也担任 Ecoleaders 和 CSSA的小红书 & instagram account manager
+
+4) i'm also a part of the cornell daily sun science section writer (so i have a lot of writing and marketing and designing experience)
+- <a href="https://www.cornellsun.com/article/2025/03/renowned-environmental-journalist-to-visit-cornell-to-discuss-climate-conservation" target="_blank">https://www.cornellsun.com/article/2025/03/renowned-environmental-journalist-to-visit-cornell-to-discuss-climate-conservation</a>
+- <a href="https://www.cornellsun.com/article/2024/11/bridging-cultures-and-crops-cornells-eoa-program-connects-graduate-students-with-hispanic-farmers-in-n-y" target="_blank">https://www.cornellsun.com/article/2024/11/bridging-cultures-and-crops-cornells-eoa-program-connects-graduate-students-with-hispanic-farmers-in-n-y</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我在高中时就担任过CSSA和Ecoleader 两个社团的ig 运营者。今年夏天，我在杂志社实习，学习如何将自己对时尚与传播的兴趣应用于creating 有趣且吸引all age group的文章。我希望在cornell能继续这个爱好，为CSSA制作更有吸引力的推文，并不断提升自己的能力！
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        就像我之前提到的，我想加入 CSSA，是因为在高中担任 president 时，体会到能给别人带来“家”的感觉时的那份开心和自豪。我也希望把这份温暖继续带给更多国际学生。我很喜欢去年 CSSA 举办的中秋和新年活动，也想把这样的体验延续下去！
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

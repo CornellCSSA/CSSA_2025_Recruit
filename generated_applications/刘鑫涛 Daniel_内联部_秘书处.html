@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘鑫涛 Daniel - 内联部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+
+    <style type="text/css" id="print-optimization">
+        @media print {
+            @page {
+                size: A4;
+                margin: 5mm;
+                page-break-inside: avoid;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                page-break-inside: avoid;
+            }
+            table, div, .content, .section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+        body { margin: 0; padding: 10px; font-family: Arial, sans-serif; line-height: 1.4; }
+        .content { max-width: 100%; overflow: visible; }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">刘鑫涛 Daniel</div>
+            
+            <div class="department-info">申请部门: 内联部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一，2029 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Biological Science, CALS</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">yanran77l</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    备注
+                </div>
+                <div class="answer-text">
+                    
+                        Resume形式新颖
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1E7U-DXvu8K2LZj2Dkzu0R_VtYiRgDnEv" target="_blank">https://drive.google.com/open?id=1E7U-DXvu8K2LZj2Dkzu0R_VtYiRgDnEv</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/刘鑫涛 Daniel_img_2_7123.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1rFI7Zu6jH063cmU4wYaBXeOHnj907sM_" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        在CSSA里发挥自己爱好多，会玩，比较有幽默感的优势，认识一些新的好朋友并且和他们一起玩！我来自福州，没有什么朋友一起来康村，对我而言CSSA是一个很好的交到新的好朋友的机会。我喜欢和朋友们一起玩棋牌，唱歌，桌游，打本，海龟汤，还会玩音乐，收集化石，看星星，摄影，收集古董，希望在CSSA里面找到同好
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        感觉大家都能玩的很放松，很舒服（跟回了家一样哈哈哈）。看到CSSA里面的所有成员都有非常好的关系。大家可以分工合作，发挥自己的长处。也可以学到很多新的能力。大家一起玩，互相学习，共同进步
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        我会玩一些民族乐器比如京胡，埙，箫也把它们带来了康村，所以想和一些同样会乐器的朋友一起玩（有机会一起登台演出）组织大家一起去周边的天文台看星星，去附近的溪流边寻找化石（我已经在校园里发现了许多化石！）去附近的公园里camping，观鸟。组织朋友们聚餐，唱歌，玩桌游。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我感觉内联部需要的是可以和大家相处融洽，可以给活动提供很多新点子，会玩的人。我是一个喜欢社交的人，我比较广泛的爱好可以让我和大家都有共同话题，一起玩。我之前也组织过同学聚餐，写小品，组乐队，在这些方面有一些经验。同时在内联部能交到很多新朋友，让我更了解康村，了解伊萨卡，开发出来一些康村“隐藏玩法”。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">秘书处</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如果让你选择一周的工作，你想做什么？
+                </div>
+                <div class="answer-text">
+                    
+                        组织一场有趣的活动
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    当别人第一次见到你时，他们会说“哇，你居然___！”（请填空）  
+                </div>
+                <div class="answer-text">
+                    
+                        有这么多爱好
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    某天深夜，一位新生在微信上非常焦急地询问：‘我的航班延误了了，接机联系不上怎么办？现在半夜一个人在机场好害怕...’
+作为小助手值班的你，会如何回复？请写出具体回应（注意：你无法直接解决问题，但需要让TA感到安心）。
+                </div>
+                <div class="answer-text">
+                    
+                        同学，请不要担心，机场是个绝对安全的地方。你可以找个地方休息一会儿，不要着急。也不用担心赶不上接机。我这边马上帮你联系相关负责人，有任何消息我会第一时间通知你的！
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你希望从秘书处的伙伴们和这份工作中获得什么？（比如：深厚的友谊？一份完美的简历？超硬核的技能？还是单纯的快乐？）
+                </div>
+                <div class="answer-text">
+                    
+                        深厚的友谊！
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    （可选）有人说“我们属于我们投入过心力的地方”。你希望自己在秘书处留下怎样的痕迹？  
+                </div>
+                <div class="answer-text">
+                    
+                        尽自己的一份力帮助别人，收货深厚的友谊，做好每一次记录
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    (可选) 秘书处传统：每次团建都要尝试一个奇奇怪怪的新活动。你有什么离谱但有趣的idea吗？（多奇怪都行）
+                </div>
+                <div class="answer-text">
+                    
+                        去附近的溪流边一起徒步，收集化石（或者去antique store找中国古董，我会瓷器鉴定可以给大家讲解）
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我感觉秘书处也是一个可以帮到大家的地方。可以认识很多新朋友。我在之前也是一个爱记录生活的人，可以帮大家做记录。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

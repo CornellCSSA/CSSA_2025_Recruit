@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>许玮芸 + Weiyun - 内联部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">许玮芸 + Weiyun</div>
+            
+            <div class="department-info">申请部门: 内联部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一，2029 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Operations Research and Information Engineering, COE</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">weiyunnnn</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1WextvRSjJsoAt5jUasH3MOZNhnsdIP96" target="_blank">https://drive.google.com/open?id=1WextvRSjJsoAt5jUasH3MOZNhnsdIP96</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/许玮芸  Weiyun_img_1_7832.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=15sC9qG5LWAl8wjk2EE5q_pgMSWW1CSPL" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        刚知道被康奈尔录取后，我心中的害怕多过于开心，因为我将会要独自在一个陌生的国家居住。但CSSA的迎新活动让我感受到了家的氛围，从加入微信群到新生见面会，我认识了很多朋友也有了归属感。这段经历让我想要把这份温暖传递下去，让中国学生都能迅速融入校园。因此我希望加入CSSA，成为能带给别人支持和陪伴的人。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        在我心目中，CSSA是一个带来归属感与力量的大家庭。对新生而言，它在你刚到陌生环境的时候，给予你方向与陪伴。对老生而言，它让大家可以通过筹办活动、互相支持一起成长。我觉得CSSA帮助中国学生更快融入康奈尔的学习和生活，它所举办的活动也促进了跨文化交流。CSSA是很多中国同学心里的第二个家。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        我想推动的是一个陪伴成长计划。在迎新季，我希望建立学长学姐伙伴制度，让在校生提前与新生配对，线上解答选课和生活问题，在新生到校后带他们逛校园，甚至去吃在伊萨卡的第一顿中餐。在学期中，我想邀请在校的同专业学长姐举办分享会，主题涵盖实习申请、求职准备和职业规划等，让CSSA成为大家分享资源的重要平台。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我选择内联部是因为我很重视团队的凝聚力，想成为连接集体的桥梁。内联部就像CSSA的“心脏”，负责让成员更团结。我希望能用自己的热情和责任心，帮助成员更快融入集体，策划一些有意义的内部团建活动，如破冰晚餐、节日聚餐等。只有当团队内部真正团结高效，CSSA才能更好地对外服务，发挥它在校园里的影响力。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">外联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    之前是否有谈赞助/谈判经验？若无，请填“无”；
+若有，请稍作描述。
+                </div>
+                <div class="answer-text">
+                    
+                        有。作为学校多媒体社的创始人兼负责人，我主导了跨校 TED Talks 职业探索活动的外联工作。我负责邀请并与5位演讲嘉宾沟通演讲主题、日程与需求，谈判活动场地与后勤支持，协调摄影团队与制作活动周边商品，最终活动吸引了100+名观众。我还主导社交媒体运营，与广播电台合作，制作的 Instagram Reels 获得25K+浏览量，提升了社团对外影响力。
+在学生会担任 Prefect Leader 时，我多次参与大型校园活动的筹办，如运动会、嘉年华和心理健康周。我负责联系校外商家洽谈赞助（饮料、食品及奖品），并与校方管理层沟通申请场地、资金与后勤支持。在活动筹备过程中，我常需要在学生和校方之间进行协调。这些经历让我积累了实际的赞助洽谈与外部合作的经验。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我希望加入外联部，把我的沟通和组织能力转化为CSSA的外部价值。我喜欢主动与人交流，善于把陌生人变熟络。身边的朋友常说我是社交破冰者，因为我能很快和陌生人建立起轻松的氛围。我希望把这种能力用于CSSA的对外合作，用真诚去争取资源，与商家建立长期信任的关系，帮助CSSA在校园内外塑造良好的品牌形象。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    Any other questions or comments?
+                </div>
+                <div class="answer-text">
+                    
+                        这个表单设计得非常清晰有条理，感谢你们的用心，期待在面试时与大家见面！
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母依萱 + Joanna - 秘书处</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">母依萱 + Joanna</div>
+            
+            <div class="department-info">申请部门: 秘书处</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大二，2028 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Human development, CHE</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">Joanna_900</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1cZkIJwmm4pPLPbyr2U8Ei3ko6Qn0JmZk" target="_blank">https://drive.google.com/open?id=1cZkIJwmm4pPLPbyr2U8Ei3ko6Qn0JmZk</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/母依萱  Joanna_img_1_7340.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1jLU9azF3zpsS2siw0pPVad_8BVbR8rN4" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        我想加入CSSA，是因为它曾给过我实实在在的帮助。当我是新生并且为选课一筹莫展的时候，是无意中刷到的CSSA的指南一步步教我如何操作系统。我也通过CSSA的群找到了很多课友，不需要在课上独自摸索。这些及时有用的信息，都让我感到了温暖。如今，我想要靠近感受这种温暖，并且成为点亮他人的灯，去传递这份温暖
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        CSSA是一个在异国他乡提供归属感的温暖大家庭。它是一个锚点，可以让我们在文化差异的迷茫中，找到一些共同的根。高中留学的第一年，我打开了从不看的春晚，虽最后还是没看完，但这些仪式和CSSA这样的组织，是一种不必多言却必须存在的联结。此外，通过举办中秋春节这样的活动，CSSA也是一个传递文化的重要组织
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        我最希望能在校园中延续它曾带给我的那份归属感和温暖。例如，在新生欢迎活动中提供轻松交流的机会，打破新生初来时的不安。我也了解到今年秘书部的重点任务之一是编写新生手册，我非常希望参与这项工作，切实的帮助同学适应校园。同时，我也希望可以锻炼自己整合信息的能力。在帮助他人的时候收获成长是一件非常有意义的事
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">秘书处</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如果让你选择未来一周的工作，你想做什么？
+                </div>
+                <div class="answer-text">
+                    
+                        整理一份混乱的历年档案库
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    当别人第一次见到你时，他们会说“哇，你居然___！”（请填空）  
+                </div>
+                <div class="answer-text">
+                    
+                        你居然牙齿这么白
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    某天深夜，一位新生在微信上非常焦急地询问：‘我的航班延误了了，接机联系不上怎么办？现在半夜一个人在机场好害怕...’
+作为小助手值班的你，会如何回复？请写出具体回应（注意：你无法直接解决问题，但需要让TA感到安心）。
+                </div>
+                <div class="answer-text">
+                    
+                        同学你好，看到你的消息我特别能理解你现在的心情。深夜一个人在陌生的机场，接机联系不上，确实会让人感到害怕。请先深呼吸，你并不是一个人，我在这里陪着你。机场通常是24小时有工作人员和警察的，周围也有不少旅客，整体环境还是比较安全的，当然也记得照顾好自己，不要放松警惕。 我之前也遇到过类似的情况，有一次我家人航班严重晚点，联系不上接机，也是在机场半夜被困了三个小时，当时也非常焦虑。后来我们先是坐了会儿，保持手机有电，一边联系一边慢慢就解决了。你可以先试试联系机场客服台，在人多有灯光的地方坐着。XXX这里有售货机/24小时便利店，可以去那里买点水和食物。 这是我们学校的紧急联系方式，中国大使馆，和纽约地区的求助电话，你存一下：[电话1]，[电话2]，[电话3]。也可以联系一下学校住宿说明一下check-in时间会晚，要求他们保留一下钥匙并且提供给你RA的联系电话，确保可以入住，他们通常会理解这种突发状况。 先跟家人或朋友保持联系（如果在纽约有熟人的话更好），这样万一有什么紧急情况，也能及时找到人帮忙。别担心，我今晚也会一直在线，你随时可以找我、告诉我进展。别怕，我就在这儿陪着你。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你希望从秘书处的伙伴们和这份工作中获得什么？（比如：深厚的友谊？一份完美的简历？超硬核的技能？还是单纯的快乐？）
+                </div>
+                <div class="answer-text">
+                    
+                        我希望获得三样东西：与伙伴们的深厚友谊，在琐碎事务中炼就的组织管理能力，以及因帮助他人的经历和快乐
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    （可选） 秘书处传统：每次团建都要尝试一个奇奇怪怪的新活动。你有什么离谱但有趣的idea吗？（多奇怪都行）
+                </div>
+                <div class="answer-text">
+                    
+                        身份错位日： 每人随机抽取另一个部门成员的名字，在整场团建中不仅要“扮演”对方的人设（比如说话方式、标志性动作、甚至日常工作习惯），还要用对方的视角来完成团队任务。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        在招新会上，部长坦言这里有许多繁琐的工作，但这正是它吸引我的地方。招新推文中所说，秘书处是CSSA的万金油，这些看似基础的工作，恰恰是组织顺畅运行的基石。我的经历也与秘书处的职责高度契合，我曾担任一个文刊的主编整理复杂信息，还在暑假实习中设计并且创建了员工入职培训的课程。我很享受将琐碎事务梳理的过程
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">外联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    之前是否有谈赞助/谈判经验？若无，请填“无”；
+若有，请稍作描述。
+                </div>
+                <div class="answer-text">
+                    
+                        有。
+1）曾负责策划校园心理健康艺术展，邀请艺术治疗师参与，并协调财务部门、学校管理层、艺术系及学生团队之间的合作。期间需要在全校代表前进行展示，统筹多方需求与资源分配。
+2）担任一场心理健康会议的闭幕主旨嘉宾负责人，接待并协调了马丁·路德·金三世先生（Martin Luther King III - the son of Martin Luther King Jr.）的相关事宜，包括流程安排与多方对接。
+3）高中时作为中学导师团队的联合负责人，跨校筹办中学舞会，协调涉及财务处、初中部主管、班主任、不同学校行政人员及我所指导的导师团队，推动活动顺利落地。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我相信一个组织绝不能成为孤岛，而外联正是CSSA与外界连接的重要桥梁。大学是从校园走向社会的过渡阶段，外联部不仅通过与企业合作创造机会，更能为学生拓展实习资源，这些都与我期望为同学提供实际帮助的初衷契合。同时，我也希望在这个过程中锻炼自己与合作伙伴沟通的能力，积累人脉并学习如何建立和维护关系
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

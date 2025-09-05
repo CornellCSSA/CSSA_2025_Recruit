@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白哲齐Sophie - 宣传部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">白哲齐Sophie</div>
+            
+            <div class="department-info">申请部门: 宣传部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一，2029 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Design+Environmental Analysis, CHE</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">sophiebai25</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1iee2sV8XKW35sxAxdS-IDo3woxVMRhFR" target="_blank">https://drive.google.com/open?id=1iee2sV8XKW35sxAxdS-IDo3woxVMRhFR</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1LVDMRHt475e-mYWcOCt36N54eP6GQlrJ" target="_blank">https://drive.google.com/open?id=1LVDMRHt475e-mYWcOCt36N54eP6GQlrJ</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        我想加入CSSA，是因为我希望能参与校园里有趣又有意义的活动，并贡献自己的兴趣和能力。对我来说，CSSA是一个让同学们聚在一起分享文化、经验和资源的平台，我希望通过参与，不仅能体验和学习活动策划与组织，也能结识更多志同道合的朋友。我希望在这里尝试、实践、学习新技能。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        我心目中的CSSA是让海外学子有一份归属感的地方。在刚被录取后通过CSSA加了新生群，让我感到我不是一个人孤身来到一个陌生的地方，而是有一个温暖的群体可以寻求帮助。虽然作为大一新生我还没参加过任何活动，我相信CSSA举办的传统节日活动和各种有意思的活动能我们在异国他乡仍找到归属感。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        加入CSSA之后，我最想做的是将自己的设计和宣传能力应用到实际活动中，让更多同学看到、了解并参与学联的各类活动。比如制作活动海报、社交平台推送、短视频宣传，或者尝试一些新颖的视觉呈现形式，让活动更有吸引力。我对脱口秀和喜剧很感兴趣，可能想策划相关活动让同学们有机会分享生活趣事或对观点见解。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">宣传部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如果申请宣传部，我们强烈建议提交一份作品集（max 2 pages）。
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1bMh7U8S4XpljvxvNvKHbYtyFbwxfvQc6" target="_blank">https://drive.google.com/open?id=1bMh7U8S4XpljvxvNvKHbYtyFbwxfvQc6</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如有公众号排版、社交媒体运营或其他相关经历，请在下方文字框内粘贴相关公众号文章链接、作品链接，或进行补充说明。
+                </div>
+                <div class="answer-text">
+                    
+                        高中yearbook排版：<a href="https://1drv.ms/v/c/eb16375f198261bf/EU1HFALMCTlMlv5MRPkb34YB9IYK-V_2rf59i26G9WYwBg?e=xmh4uS" target="_blank">https://1drv.ms/v/c/eb16375f198261bf/EU1HFALMCTlMlv5MRPkb34YB9IYK-V_2rf59i26G9WYwBg?e=xmh4uS</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我对设计很感兴趣，也希望通过设计和宣传让更多人关注到学联的活动，产生一些真实的影响。在高中时，我有过平面设计和yearbook的经验，很喜欢通过视觉的方式转换信息。在康奈尔，我想把这些经验延续下去，也挑战自己没有尝试过的内容，如公众号/小红书推送的排版、活动的视觉设计，甚至短视频或摄影宣传。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">财务部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        我数学基础比较扎实，对数字和逻辑处理很有兴趣，也喜欢细致的工作。我虽然没有财务相关经验，但很想学习如何管理社团预算、整理收支和参与活动筹划。我希望在财务部能发挥数字能力，并得到学习实际财务技能的机会。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        否
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

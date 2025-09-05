@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赵思雯Stephanie - 宣传部</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">赵思雯Stephanie</div>
+            
+            <div class="department-info">申请部门: 宣传部</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一，2029 Spring</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Communication, CALS</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">steph154457anie</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    备注
+                </div>
+                <div class="answer-text">
+                    
+                        小红书4.7w粉
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=17dSbtevT1j47ikvOQpdz8Ouivha4RJ8w" target="_blank">https://drive.google.com/open?id=17dSbtevT1j47ikvOQpdz8Ouivha4RJ8w</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/赵思雯Stephanie_img_2_7556.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1yqqVqSJLziyISxbthgDQrtWWhfazUcmw" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        首先，能够加入到这样一个组织，肯定能够帮助我更好的融入中国学生团体，可以让我找到归属感，和自己的文化有更直接的关系，比如春节的时候可以和大家一起策划、参与活动。其次，我想锻炼自己的策划活动能力。因为听学长说过cssa有很多组织大型活动的机会，所以特别希望能够参与其中。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        我心目中的CSSA是一个非常团结的中国学生组织。在来康奈尔之前就有听说过并且关注了CSSA的公众号。因为有听说过CSSA是康奈尔唯一领事馆官方认证过的中国学生组织，所以在我心目中CSSA无论是资源还是影响力，一定是很权威的。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        若是可以加入CSSA，我会想在更多的社交媒体平台‘举办’活动，发布更多视频或者图文等。比如，因为抖音有共创功能，可以和别的大学cssa组织或者别的中国学生组织一起发布视频，拍一些比较有趣的视频或一些线上活动或者PK。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">宣传部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如有公众号排版、社交媒体运营或其他相关经历，请在下方文字框内粘贴相关公众号文章链接、作品链接，或进行补充说明。
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://www.xiaohongshu.com/user/profile/5d99f5fe0000000001002318?xsec_token=YBghDl4fF7zl-0zIpYFJrxaSvA_MD3zk5HWS5ZKh_4OkA=&xsec_source=app_share&xhsshare=CopyLink&appuid=5d99f5fe0000000001002318&apptime=1756999210&share_id=6675bf8157c74a36b581aad87081a071" target="_blank">https://www.xiaohongshu.com/user/profile/5d99f5fe0000000001002318?xsec_token=YBghDl4fF7zl-0zIpYFJrxaSvA_MD3zk5HWS5ZKh_4OkA=&xsec_source=app_share&xhsshare=CopyLink&appuid=5d99f5fe0000000001002318&apptime=1756999210&share_id=6675bf8157c74a36b581aad87081a071</a>
+这是我的小红书账号。虽然没有特别'专业'的社交媒体运营经验，但是我在自己的社交媒体账号连续发布了5年内容，且最爆的视频有600万播放量，我认为当时在小红书这是一个很难得的流量。我同时也有在别的社交媒体同步更新，例如抖音、b站、youtube。在美高期间我也有管理多个校内的instagram账号，且在校报club担任总社交媒体管理员，并创造了校历史上第一个校报的官方账号，也帮助校报建立了自己的网站。在高中期间，学校官方也请我帮忙拍摄过许多住宿生活的活动，每年官方提供给新生的“room tour”视频也是我剪辑并拍摄发布的。因为是communication专业，所以经常与社交媒体打交道，这方面的经验有很多，但是我在这里只列出来一些我认为比较特别的。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        像我前面提到的一样，传媒/传播学是我的专业，我早早在初中开始就有了相关的经验。在小红书上作为一个小博主也让我对社交媒体这方面的工作非常感兴趣。在美高4年，我在校内也担任了不少管理社交媒体账号或者帮助创建内容。我认为宣传部非常符合我想做的事情，我也可以提供不少帮助。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">内联部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        在生活中，我是一个很有意思的人。我经常组织我和我的朋友们一起聚在一起玩一些很有趣的活动。我很容易共情他人，我认为这一点帮助我建立好关系，所以我相信如果可以加入CSSA我和团员们的关系一定会很融洽。我在高中时是宿管，我和跟我年龄不同的女孩子们相处的也很好，我知道如何和不同背景的人打交道。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        否
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        

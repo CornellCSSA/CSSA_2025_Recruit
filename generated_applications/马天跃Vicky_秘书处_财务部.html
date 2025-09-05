@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马天跃Vicky - 秘书处</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .applicant-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .department-info {
+            font-size: 18px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .generation-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 基本信息栏 */
+        .basic-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        /* 问答区域 */
+        .content {
+            padding: 30px;
+        }
+        
+        /* 段落标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .answer-text {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            color: #495057;
+
+            line-height: 1.6;
+        }
+        
+        .empty-answer {
+            color: #adb5bd;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .applicant-name {
+                font-size: 24px;
+            }
+            
+            .department-info {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 15px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section-title {
+                background: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="applicant-name">马天跃Vicky</div>
+            
+            <div class="department-info">申请部门: 秘书处</div>
+            
+        </div>
+        
+        
+        <div class="basic-info">
+            <div class="info-grid">
+                
+                <div class="info-item">
+                    <span class="info-label">年级:</span>
+                    <span class="info-value">本科大一，2029 Fall</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">专业:</span>
+                    <span class="info-value">Hospitality, SHA</span>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">微信号:</span>
+                    <span class="info-value">tyue277</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            
+            <div class="section-title">基本信息</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    1-page Resume (Encouraged，PDF格式，中英文均可)
+Portfolio or Additional Files (Optional，PDF或视频)
+
+请把文件名命为：first name_Last name_netid
+                </div>
+                <div class="answer-text">
+                    
+                        <a href="https://drive.google.com/open?id=1IockxGbKBSalpQtkaec4yLISaH6tPsf0," target="_blank">https://drive.google.com/open?id=1IockxGbKBSalpQtkaec4yLISaH6tPsf0,</a> <a href="https://drive.google.com/open?id=1OlmXTs634UO5PFZ2k51XbeLPkQy9l-6B" target="_blank">https://drive.google.com/open?id=1OlmXTs634UO5PFZ2k51XbeLPkQy9l-6B</a>
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    请上传一张自己的照片，普通的生活照就可以！（只是为了面试的时候我们可以把你认出来）
+                </div>
+                <div class="answer-text">
+                    
+                        <div style="margin: 10px 0;"><img src="images/马天跃Vicky_img_1_9268.jpg" alt="图片" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><br><a href="https://drive.google.com/open?id=1Aa6C30oeswagfso_KIAGHi8lINzl6jGK" target="_blank" style="font-size: 12px; color: #666;">查看原图</a></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">通用问题部分</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    为什么想要加入CSSA？
+                </div>
+                <div class="answer-text">
+                    
+                        或许是偶然在小红书被CSSA的春晚舞台帖子所震撼，又或许是在北京见面会的贴心小礼包，让我感觉到满满的温暖和亲切感。这些瞬间让我对康奈尔校园生活的陌生感似乎少了很多，心里有种被接纳和期待新家的感觉。我希望我也可以把曾今感受到的温暖和真诚传递给更多同学，同时也借助学联的平台唤起中国文化的记忆和家里的味道
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你心目中CSSA是个什么样的组织？
+                </div>
+                <div class="answer-text">
+                    
+                        CSSA对于我来说是一个有温度，故事和凝聚力的大家庭。他让我感觉到在异国他乡的第二个家，一起和好朋友做难忘，疯狂和幸福的事情。CSSA不仅是一个简单的组织，但在我眼里更是一个桥梁，将属于中国自己的传统和温情带到国外，自豪的转递给来自不同国家的伙伴。这让我感觉到温暖和归属感的力量可以多么的深厚和持久
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    加入CSSA之后，你最想在康奈尔校园内实现的事情是什么？
+                </div>
+                <div class="answer-text">
+                    
+                        我想为CSSA一年一度的春晚添加点延续性的特色元素。例如明年是马年，可以和宣传部策划出一个“康奈尔马”的吉祥物形象，每年都推出一个不一样的形象，加入这场春晚的标志性元素，作为海报/宣传的主要形象，提高CSSA的辨识度和在场氛围。在入场前的场地，可以制作一个的心愿墙，让大家都写下新的一年的远景和期待
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">秘书处</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    如果让你选择未来一周的工作，你想做什么？
+                </div>
+                <div class="answer-text">
+                    
+                        写一封让新生感到温暖的欢迎邮件
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    当别人第一次见到你时，他们会说“哇，你居然___！”（请填空）  
+                </div>
+                <div class="answer-text">
+                    
+                        大夏天穿这么多 你不热吗
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    某天深夜，一位新生在微信上非常焦急地询问：‘我的航班延误了了，接机联系不上怎么办？现在半夜一个人在机场好害怕...’
+作为小助手值班的你，会如何回复？请写出具体回应（注意：你无法直接解决问题，但需要让TA感到安心）。
+                </div>
+                <div class="answer-text">
+                    
+                        你好你好同学 我很能理解你现在状况，一个人飞过来已经很不容易了，这一路确实会被很多不可控的外界因素阻挡。这很正常我们都经历过～所以你不用焦虑。不过你先不必害怕，虽然机场现在很空外面也很黑，让给谁都会有点小害怕，你可以先去一个休息室，把东西安顿好。暂时我们也无法帮你联系到接机，不过我们会实时帮你对接，有消息第一时间联系你。最坏的决定是如果接机无法到达，其实也有很多别的更好的选择，比如uber, 或者我们可以帮你看一下同一时间到达的另一波学生有没有拼车的。总之，问题再多，办法有的是！你现在只需耐心等待，在空余的时间里，你可以看看剧买个饮料舒坦一下心情或者就简单休息一下，确保攒够精力给康村的新生周！有消息我们会第一时间联系你，记得照顾好自己～
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    你希望从秘书处的伙伴们和这份工作中获得什么？（比如：深厚的友谊？一份完美的简历？超硬核的技能？还是单纯的快乐？）
+                </div>
+                <div class="answer-text">
+                    
+                        作为秘书部的一名成员，我希望这份工作可以实质性的加强我对点滴小事的细心和责任感，锻炼我如何用大局观去考虑问题的全面性，和能够圆滑的解决问题的能力，特别是在面对好几百的新生，如何去管理以及送上最真诚的服务。当用自己的最大能力去帮忙和倾听不同人的诉求或困惑时，这份工作更会让我感受到自身价值的存在意义和快乐。但在这些之上，对我我更有意义的一点是找到一群和我同频合拍的一群灵魂友友，像一个小家庭一样去治愈彼此，同时享受我们为别人带来的帮助和改变，无论影响的大小。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    （可选）有人说“我们属于我们投入过心力的地方”。你希望自己在秘书处留下怎样的痕迹？  
+                </div>
+                <div class="answer-text">
+                    
+                        我希望我的贡献不止停留在发完邮件的记录，或者是完成运营微信小助手的工作。我想承担起康奈尔在读生的担当，把我曾经从无论是小助手还是CSSA见面会感受到的关怀和支持，传递给下一届的学弟学妹们，让他们在忙碌或迷茫时也能感受到持续的温暖与陪伴。此外，我想可以在新生手册里再加一栏关于一些身心和缓解焦虑的内容。作为大陆学生对国外的一些文化和习惯需要一个过渡和接受期，例如如何缓解永远都聊不完的coffee chat, 下课找教授介绍自己等等的压力。我希望通过自己多几个月的体验，感受和反思，以及认识和询问更多的学长学姐们，能够找到这些心得并附加上手册里，留下属于我的一份心意和痕迹。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    （可选） 秘书处传统：每次团建都要尝试一个奇奇怪怪的新活动。你有什么离谱但有趣的idea吗？（多奇怪都行）
+                </div>
+                <div class="answer-text">
+                    
+                        每天我们都会遇见很多烦心事，有时候需要憋着或者无处释放。所以为了找出合适的时机合适的人去释然自己，团建的时候可以玩这个游戏。比如问题类似于，“如果你是一头牛，你会和他约会吗”然后准备十几张不同牛的照片，可以随意去吐槽锐评这个牛为什么没长在自己审美上，或者这个牛为什么就完美符合了自己的理想型。像“这头牛感觉很能给我保护欲，给我一种惹谁都不怕的勇气”或者“这头牛眼睛里透出了无辜感，疑似妈宝男实锤，pass”。可以没有逻辑，也可以没有道理，只是借机去释放情绪，展现真实的一面，更能让互相理解彼此的离谱和奇怪的一面
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第一志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        在我眼里，秘书部不一定冲在最前线做最显眼的事情，但它拥有全局观，为团队默默的做出有力的保障和后勤工作。也许是小助手的一句话，或者是新生手册里的一行文字，都在最关键的时候给予安慰和帮助。我希望成为那个愿意花时间处理细微，往往被忽视的角落和事情的人，用那些小小的工作和努力来为CSSA 做出坚实的后盾。
+                    
+                </div>
+            </div>
+            
+            
+            <div class="section-title">财务部</div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    第二志愿为什么选择这个部门？
+                </div>
+                <div class="answer-text">
+                    
+                        财务部对我来说有着无限的探索空间和自由，让我更好奇的想去钻研能够扩大资金的不同机遇。整理和处理细致的数字一方面可以让我沉下心来，去关注眼前的一切，另一方面可以从中找出资金根源的不足，填补漏洞。我希望将CSSA的财务保持持续的流动性，辅助实现各个部门的绝对自由，将漂浮在脑海里的想法真正落地和实现。
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    是否接受部门调剂？
+                </div>
+                <div class="answer-text">
+                    
+                        是
+                    
+                </div>
+            </div>
+            
+            <div class="question-item">
+                <div class="question-text">
+                    Any other questions or comments?
+                </div>
+                <div class="answer-text">
+                    
+                        🈚️
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+        
